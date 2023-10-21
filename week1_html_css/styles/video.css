@@ -42,8 +42,25 @@
   padding-right: 30px;
 }
 
+@media screen and (max-width: 1400px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .video-time {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
   position: absolute;
   bottom: 8px;
   right: 5px;
