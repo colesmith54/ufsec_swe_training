@@ -4,16 +4,21 @@ const util = require("util");
 
 const execAsync = util.promisify(exec);
 
-// run inside a react subfolder
 async function main() {
     try {
+        // Save the current directory (latest React subdir)
+        const currentDir = process.cwd();
+
+        // Move up one directory
         process.chdir("..");
 
+        // Git add, commit, and push
         await execAsync("git add .");
-        const latestReactFolder = getLatestReactFolder();
+        const latestReactFolder = currentDir.split("/").pop();
         await execAsync(`git commit -am 'finish lesson ${latestReactFolder}'`);
         await execAsync("git push");
 
+        // Copy directory and increment n
         const newReactFolder = `react${
             parseInt(latestReactFolder.replace("react", "")) + 1
         }`;
@@ -21,32 +26,24 @@ async function main() {
             recursive: true,
         });
 
+        // Update package.json and package-lock.json
         updatePackageJsonNames(`./${newReactFolder}`, newReactFolder);
 
+        // Change to new directory and perform npm tasks
         process.chdir(`./${newReactFolder}`);
-
         if (fs.existsSync("./node_modules")) {
             fs.rmSync("./node_modules", { recursive: true });
         }
-
         await execAsync("npm install");
         await execAsync("npm upgrade");
+
+        // Start the new React project
         await execAsync("npm start");
 
         console.log("Script completed successfully!");
     } catch (error) {
         console.error("An error occurred:", error);
     }
-}
-
-function getLatestReactFolder() {
-    const directories = fs
-        .readdirSync("../")
-        .filter((file) => fs.statSync(`../${file}`).isDirectory());
-    const reactDirectories = directories.filter((dir) =>
-        dir.startsWith("react")
-    );
-    return reactDirectories.sort().pop();
 }
 
 function updatePackageJsonNames(directory, newName) {
