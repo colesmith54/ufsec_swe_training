@@ -9,14 +9,14 @@ async function main() {
         // Save the current directory (latest React subdir)
         const currentDir = process.cwd();
 
-        // Move up one directory
-        process.chdir("..");
-
         // Git add, commit, and push
         await execAsync("git add .");
         const latestReactFolder = currentDir.split("/").pop();
         await execAsync(`git commit -am 'finish lesson ${latestReactFolder}'`);
         await execAsync("git push");
+
+        // Move up one directory
+        process.chdir("..");
 
         // Copy directory and increment n
         const newReactFolder = `react${
