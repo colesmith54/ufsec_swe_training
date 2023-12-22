@@ -37,9 +37,6 @@ async function main() {
         await execAsync("npm install");
         await execAsync("npm upgrade");
 
-        // Start the new React project
-        await execAsync("npm start");
-
         console.log("Script completed successfully!");
     } catch (error) {
         console.error("An error occurred:", error);
