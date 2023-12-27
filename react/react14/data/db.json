@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "text": "Almonds"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "text": "Bread"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "text": "Butter"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "text": "Cheese"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "text": "Chicken"
+    },
+    {
+      "id": 11,
+      "checked": false,
+      "text": "Salt"
+    },
+    {
+      "id": 12,
+      "checked": false,
+      "text": "Sugar"
+    },
+    {
+      "id": 13,
+      "checked": false,
+      "text": "Tomatoes"
+    },
+    {
+      "id": 14,
+      "checked": false,
+      "text": "Yogurt"
+    },
+    {
+      "id": 15,
+      "checked": false,
+      "text": "Beans"
+    }
+  ]
+}
