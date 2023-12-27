@@ -1,0 +1,74 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "checked": false,
+            "item": "Almonds"
+        },
+        {
+            "id": 2,
+            "checked": false,
+            "item": "Bread"
+        },
+        {
+            "id": 3,
+            "checked": false,
+            "item": "Butter"
+        },
+        {
+            "id": 4,
+            "checked": false,
+            "item": "Cheese"
+        },
+        {
+            "id": 5,
+            "checked": false,
+            "item": "Chicken"
+        },
+        {
+            "id": 6,
+            "checked": false,
+            "item": "Eggs"
+        },
+        {
+            "id": 7,
+            "checked": false,
+            "item": "Fish"
+        },
+        {
+            "id": 8,
+            "checked": false,
+            "item": "Milk"
+        },
+        {
+            "id": 9,
+            "checked": false,
+            "item": "Pasta"
+        },
+        {
+            "id": 10,
+            "checked": false,
+            "item": "Rice"
+        },
+        {
+            "id": 11,
+            "checked": false,
+            "item": "Salt"
+        },
+        {
+            "id": 12,
+            "checked": false,
+            "item": "Sugar"
+        },
+        {
+            "id": 13,
+            "checked": false,
+            "item": "Tomatoes"
+        },
+        {
+            "id": 14,
+            "checked": false,
+            "item": "Yogurt"
+        }
+    ]
+}
